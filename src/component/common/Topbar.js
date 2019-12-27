@@ -16,10 +16,14 @@ class Topbar extends Component {
     menuItems.map((d) => {
       
       const keyName = menuItems.indexOf(d)
+      let spacing = "md:px-4"
+      if(keyName === menuItems.length -1){
+        spacing = "md:pl-4"
+      }
       //const color = keyName % 2 === 0 ? "md:bg-yellow-500" : "md:bg-blue-500"
       return (
       <li
-      className={`${""} md:px-4`}
+      className={`${""} ${spacing} cursor-pointer`}
       key={keyName}>{d}</li>
       )
     })
@@ -27,7 +31,7 @@ class Topbar extends Component {
 
     return (
       <React.Fragment>
-        <div className="shadow-md bg-indigo-500 w-full h-12 px-8">
+        <div className="shadow-md bg-indigo-800 w-full h-12 px-8">
           <div className="flex flex-wrap content-center h-full">
             <div className="w-1/2 h-full flex content-center" >
               <img src={planet} 
