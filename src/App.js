@@ -6,6 +6,7 @@ class App extends Component{
 
 
   state = {
+    name : 'anant',
     isSliderOpen : "close-slider",
     menuItems : [
       "About",
